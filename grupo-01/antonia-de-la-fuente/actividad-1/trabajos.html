@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajos — Janis Sepúlveda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <a href="index.html" class="logo">
+    <img src="assets/placeholder.png" alt="Logo">
+  </a>
+
+  <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="trabajos.html">Trabajos</a></li>
+      <li><a href="sobremi.html">Sobre mí</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="email-btn">
+    <a href="#" id="cvPreviewBtn">CV</a>
+  </div>
+</header>
+
+<main class="content">
+  <h1 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; color:#1A3B2F;">
+  </h1>
+
+  <div class="gallery">
+    <div class="item" data-id="silueta">
+      <img src="assets/code/flores.jpg" alt="Silueta">
+      <span class="item-tag">Código</span>
+      <div class="overlay"><span>Silueta</span></div>
+    </div>
+
+    <div class="item" data-id="postdata">
+      <img src="assets/ux/post-data-portada-opt.png" alt="">
+      <span class="item-tag">UX/UI</span>
+      <div class="overlay"><span>Postdata</span></div>
+    </div>
+
+    <div class="item" data-id="auna">
+      <img src="assets/code/aunaPortada.png" alt="">
+      <span class="item-tag">UX/UI</span>
+      <div class="overlay"><span>AUNA</span></div>
+    </div>
+
+    <div class="item" data-id="p5">
+      <img src="assets/code/animacionP5.gif" alt="">
+      <span class="item-tag">Código</span>
+      <div class="overlay"><span>Experimentación p5.js</span></div>
+    </div>
+
+    <div class="item" data-id="muebles">
+      <img src="assets/industrial/mueble1.png" alt="">
+      <span class="item-tag">Industrial</span>
+      <div class="overlay"><span>Muebles Expositores</span></div>
+    </div>
+
+    <div class="item" data-id="portaprecios">
+      <img src="assets/industrial/portaprecio.png" alt="">
+      <span class="item-tag">Industrial</span>
+      <div class="overlay"><span>Portaprecios</span></div>
+    </div>
+
+    <div class="item" data-id="packagings">
+      <img src="assets/industrial/packaging1.png" alt="">
+      <span class="item-tag">Industrial</span>
+      <div class="overlay"><span>Packagings</span></div>
+    </div>
+
+    <div class="item" data-id="flanjes">
+      <img src="assets/industrial/flanje1.png" alt="">
+      <span class="item-tag">Industrial</span>
+      <div class="overlay"><span>Flanjes</span></div>
+    </div>
+
+    <div class="item" data-id="caddies">
+      <img src="assets/industrial/caddie02.png" alt="">
+      <span class="item-tag">Industrial</span>
+      <div class="overlay"><span>Caddies</span></div>
+    </div>
+
+    <div class="item" data-id="disenoabierto">
+      <img src="assets/ux/mockup.png" alt="">
+      <span class="item-tag">UX/UI</span>
+      <div class="overlay"><span>App Diseño Abierto</span></div>
+    </div>
+
+    <div class="item" data-id="conectaudp">
+      <img src="assets/ux/udp2.png" alt="">
+      <span class="item-tag">UX/UI</span>
+      <div class="overlay"><span>ConectaUDP</span></div>
+    </div>
+
+  </div>
+</main>
+
+  <!-- CV PREVIEW MODAL -->
+  <div id="cvModal" class="cv-modal">
+    <div class="cv-modal-content">
+      <span id="cerrarCvModal" class="modal-close">&times;</span>
+      <iframe id="cvFrame" src="assets/cv_janis.pdf" frameborder="0" style="width:100%; height:80vh;"></iframe>
+    </div>
+  </div>
+
+<!-- FOOTER -->
+<div class="footer-bar" id="footerBar">
+  <span>© janis sepulveda</span>
+  <a href="mailto:v.sepulvedajanis@gmail.com" style="color:white; text-decoration:underline;">v.sepulvedajanis@gmail.com</a>
+  <span>2025</span>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="cerrarModal" class="modal-close">&times;</span>
+
+    <h2 id="modalTitulo"></h2>
+    <p id="modalAno"></p>
+
+    <div class="modal-body">
+      <div class="modal-descripcion">
+        <p id="modalDescripcion"></p>
+        <p><strong>Tags:</strong> <span id="modalTags"></span></p>
+      </div>
+      <div class="modal-fotos" id="modalFotos"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="trabajos.js"></script>
+<script>
+  const footer = document.getElementById("footerBar");
+  window.addEventListener("scroll", () => {
+    const scrollPos = window.scrollY + window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+    footer.classList.toggle("visible", scrollPos >= docHeight - 5);
+  });
+
+  // Hamburger menu
+  (function(){
+    const btn = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+    if(!btn || !menu) return;
+    btn.addEventListener('click', ()=>{
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{ menu.classList.remove('open'); btn.setAttribute('aria-expanded', false);}));
+  })();
+  
+  // CV preview modal
+  const cvBtn = document.getElementById('cvPreviewBtn');
+  const cvModal = document.getElementById('cvModal');
+  const cerrarCv = document.getElementById('cerrarCvModal');
+  const cvFrame = document.getElementById('cvFrame');
+
+  cvBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    cvModal.style.display = 'flex';
+    // ensure fresh load
+    cvFrame.src = 'assets/cv_janis.pdf';
+  });
+
+  cerrarCv.addEventListener('click', () => { cvModal.style.display = 'none'; cvFrame.src = ''; });
+  cvModal.addEventListener('click', (e) => { if(e.target === cvModal){ cvModal.style.display='none'; cvFrame.src = ''; } });
+</script>
+
+</body>
+</html>
