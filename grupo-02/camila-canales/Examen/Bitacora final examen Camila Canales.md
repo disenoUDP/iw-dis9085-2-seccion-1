@@ -1,4 +1,4 @@
-# Bitácora Portafolio Camila Canales (entrega 23-11)
+# Bitácora final examen Portafolio Camila Canales (entrega 23-11)
 
 
 ### Link al figma 
@@ -16,6 +16,13 @@ href="https://caamiii.github.io/Camila_Canales_Portafolio/"
 >
 ```
 
+### Link al repositorio
+
+```html
+<div
+href="https://github.com/caamiii/Camila_Canales_Portafolio"
+>
+```
 
 
 **Recursos usados:**
