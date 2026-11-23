@@ -1,6 +1,7 @@
 # Bitácora / Portafolio Examen
 
-https://www.figma.com/design/OgOypnD8pmgQdBuEAz1LvV/Guillermo_Ib%C3%A1%C3%B1ez_Examen?node-id=65-50&t=4UtCKJTQP6Nj3rnA-1
+PORTAFOLIO: https://guilleibanez.github.io/portafolio_guibel/
+FIGMA: https://www.figma.com/design/OgOypnD8pmgQdBuEAz1LvV/Guillermo_Ib%C3%A1%C3%B1ez_Examen?node-id=65-50&t=4UtCKJTQP6Nj3rnA-1
 
 La idea de la página es que sea limpia y poco cargada visualmente. Lo que mas debe resaltar son los proyectos, los títulos y las fotos de las maquetas, procesos o resultados finales.
 
@@ -98,3 +99,4 @@ Para solucionarlo bien y no depender de medidas fijas, reestructuré esa parte e
 2. En la segunda fila dejé el título "Sobre mí" a la izquierda frente a los dos párrafos de biografía en morado oscuro (`#4A2E80`) a la derecha, alineados arriba. Así, sin importar qué tan ancha sea la pantalla, siempre se mantienen juntos.
 
 Por último, revisé el tema del contraste que había dejado pendiente en Figma. En tarjetas como *Experiencia Lumínica*, donde la foto tiene zonas muy oscuras y otras muy iluminadas, las etiquetas superiores y el título se perdían un poco, así que les agregué una base semitransparente oscura con desenfoque (`backdrop-filter: blur(6px)`) y texto blanco. También verifiqué la versión mobile en pantalla chica (`max-width: 48rem`), comprobando que el encabezado invirtiera bien su orden, que las tarjetas mantuvieran el zigzag alternando izquierda y derecha (`78%` de ancho), y que las píldoras de año y categoría quedaran siempre visibles en celular ya que ahí no existe el estado `hover`.
+
