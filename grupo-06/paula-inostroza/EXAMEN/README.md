@@ -3,7 +3,7 @@
 ## Información del proyecto
 
 **Link de Figma:** (https://www.figma.com/design/22OMYk2AjVtOsIJuyRmK0B/Portafolio-Int.-Web?node-id=2-3&t=9m9nFSSsm3kyQrse-1)
-
+**Link Portafolio:** (https://pau-io.github.io/paula-inostroza-portafolio/) 
 ---
 
 # Avance 1 | 9 de noviembre
